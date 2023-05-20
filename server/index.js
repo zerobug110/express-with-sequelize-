@@ -1,8 +1,11 @@
 const express = require("express")
 const app = express();
+const db = require("./models")
 
 const port = 3001
 
-app.listen(port, ()=> {
-    console.log(`server runing on ${port}`)
+db.sequelize.sync().then(()=> {
+    app.listen(port, ()=> {
+        console.log(`server runing on ${port}`)
+    })
 })
