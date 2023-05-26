@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
 
         postText: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false 
         },
 
         username: {
@@ -20,4 +20,4 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     return Posts
-}
+} 
