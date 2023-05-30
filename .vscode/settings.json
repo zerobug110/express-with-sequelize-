@@ -1,6 +1,4 @@
 {
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": false,
-    "editor.fontVariations": false,
-    "editor.codeLensFontFamily": "Fira Code, monospace"
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontVariations": false
 }

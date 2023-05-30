@@ -2,6 +2,7 @@
 import './App.css';
 import {useEffect, useState} from 'react'
 import axios from 'axios';
+import { EditIcon } from './components/icons/icons';
 
 function App() {
   const [postList, setPostList] = useState([])
@@ -9,16 +10,25 @@ function App() {
 
   useEffect(()=> {
     axios.get(`${baseUrl}`).then((response) => {
-      setPostList(response.data);      
+      setPostList(response.data);   
+      console.log(postList);   
     })
   }, [])
   // useEffect
   return (
     <div className="App">
       {
-        postList.map( (item) => {
+        postList.map( (blog) => {
           return(
-            <h1>{item.title}</h1>
+            <div className="block-card" key={blog.id}>
+              <div className="edit-icon">
+                <EditIcon/>
+              </div>
+
+              <div className="blog-title">{blog.title}</div>
+              <div className="blog-text">{blog.postText}</div>
+              <div className="blog-footer">{blog.username}</div>
+            </div>
           )
         })
       }
