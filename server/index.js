@@ -6,9 +6,9 @@ const port = 3001
 //routes 
 const postRouter = require("./routes/post")
 
+app.use(express.json());
 //middle wares
 app.use("/posts", postRouter)
-app.use(express.json());
 
 
 db.sequelize.sync().then(()=> {
@@ -17,3 +17,6 @@ db.sequelize.sync().then(()=> {
         console.log(`server runing on ${port}`)
     })
 })
+
+
+
