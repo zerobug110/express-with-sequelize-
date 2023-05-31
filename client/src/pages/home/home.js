@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { EditIcon } from "../components/icons/icons";
+import {EditIcon} from "../../components/icons/icons"
 import "./home.css";
 
 export const Home = () => {
