@@ -1,14 +1,25 @@
 import {Formik, Form, Field, ErrorMessage, } from "formik";
+import { useState } from "react";
+import axios from "axios"
 import * as Yup from "yup";
+
 export const CreatePost = () => {
+    
     const  initialValules = {
         title: "",
         postText: "",
         username: ""
     }
     
+    const [postList, setPostList] = useState([])
+    const baseUrl = "http://localhost:3001/posts"
+
     const onSubmit = (data) => {
-        console.log(data)
+        axios.post(baseUrl, data).then((response)=>{
+            setPostList(response.data)
+            console.log("it worked");
+        })
+    
     }
 
     const validationSchema = Yup.object().shape({
@@ -17,7 +28,6 @@ export const CreatePost = () => {
         username: Yup.string().min(3).max(20).required(),
     })
     
-
 
     return(
         <div className="create-post-form">

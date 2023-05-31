@@ -8,8 +8,9 @@ const port = 3001
 const postRouter = require("./routes/post")
 
 //middle wares
-app.use(express.json());
+
 app.use(cors())
+app.use(express.json());
 app.use("/posts", postRouter)
 
 

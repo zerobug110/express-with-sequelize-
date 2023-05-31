@@ -14,6 +14,18 @@ exports.createPostCtrl = async (req, res) => {
     } catch (error) {
          return res.status(500).json(error);
     }
-
 }
 
+exports.getPost = async (req, res) => {
+    try {
+        const id = req.params.id
+        const post = await Posts.findByPk(id)
+        res.json(post)
+        
+    } catch (error) {
+        return res.status(500).json(error)
+        
+    }
+}
+
+  
