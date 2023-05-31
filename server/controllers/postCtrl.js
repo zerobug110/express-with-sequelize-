@@ -1,4 +1,5 @@
 const { Posts } = require("../models");
+
 exports.getPostsCtrl = async (req, res) => {
     const listOfPosts = await Posts.findAll();
     res.json(listOfPosts);

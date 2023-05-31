@@ -14,6 +14,7 @@ app.use("/posts", postRouter)
 
 
 
+
 db.sequelize.sync().then(()=> {
    
      app.listen(port, ()=> {
