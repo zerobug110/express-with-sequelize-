@@ -2,6 +2,7 @@ import {Formik, Form, Field, ErrorMessage, } from "formik";
 import { useState } from "react";
 import axios from "axios"
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 export const CreatePost = () => {
     
@@ -13,11 +14,12 @@ export const CreatePost = () => {
     
     const [postList, setPostList] = useState([])
     const baseUrl = "http://localhost:3001/posts"
+    const navigate = useNavigate()
 
     const onSubmit = (data) => {
         axios.post(baseUrl, data).then((response)=>{
             setPostList(response.data)
-            console.log("it worked");
+            navigate("/home")
         })
     
     }

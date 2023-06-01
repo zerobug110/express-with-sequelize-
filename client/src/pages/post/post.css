@@ -1,14 +1,14 @@
 .post {
-    width: 600px;
-    margin: 50px auto;
-  
-    display: grid;
-    place-items: center;
+  width: 850px;
+  margin: 50px auto;
 
-    margin: 0 auto;
-  
-    
-  }
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  gap: 50px;  
+
+}
   
   .blog-card {
     width: 400px;
@@ -38,3 +38,7 @@
     color: #444;
   }
   
+  .comment {
+    background-color: red;
+    width: 400px;
+  }
