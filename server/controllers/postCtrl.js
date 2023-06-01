@@ -12,7 +12,7 @@ exports.createPostCtrl = async (req, res) => {
         await Posts.create(post);
         res.json(post);
     } catch (error) {
-         return res.status(500).json(error);
+         return req.status(500).json(error);
     }
 }
 
