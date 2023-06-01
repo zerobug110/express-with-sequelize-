@@ -12,15 +12,18 @@ export const Post = () => {
     })
   },[])
   return(
-    <div className="postPage">
-      <div className="leftSide">
-        <div className="post" id="individual">
-          <div className="title"> {post.title} </div>
-          <div className="body">{post.postText}</div>
-          <div className="footer">{post.username}</div>
+    <div className="post">
+      <div className="blog-card">
+        <div className="edit-icon">
+          {/* <EditIcon/> */}
         </div>
+
+        <div className="blog-title">{post.title}</div>
+        <div className="blog-text">{post.postText}</div>
+        <div className="blog-footer">{post.username}</div>
       </div>
-      <div className="rightSide">Comment Section</div>
+      <div>comment</div>
     </div>
+    
   )
 }

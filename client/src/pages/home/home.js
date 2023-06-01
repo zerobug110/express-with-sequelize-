@@ -21,7 +21,7 @@ export const Home = () => {
       {
         postList.map( (blog) => {
           return(
-            <div className="block-card" key={blog.id} onClick={()=> navige(`/post/${blog.id}`)}>
+            <div className="blog-card" key={blog.id} onClick={()=> navige(`/post/${blog.id}`)}>
               <div className="edit-icon">
                 <EditIcon/>
               </div>
