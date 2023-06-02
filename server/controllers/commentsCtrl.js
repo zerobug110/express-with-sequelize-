@@ -10,11 +10,12 @@ exports.commentsCtrl = async (req, res) => {
   }
     
 }
-exports.addCommentCtrl = async (res, req) => {
+exports.addCommentCtrl = async (req, res) => {
   try {
-    res.status(200).json({"message": "succesfull"})
+    const comment = req.body;
+    await Comments.create(comment)
+    res.json(comment)
   } catch (error) {
     res.status(500).json(error.message)
   }
 }
-

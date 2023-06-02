@@ -7,18 +7,15 @@ const port = 3001
 //routes 
 const postRouter = require("./routes/post")
 const commentRouter = require("./routes/comments")
-//middle wares
 
+//middlewares
 app.use(cors())
 app.use(express.json());
-app.use("/comments", commentRouter)
 app.use("/posts", postRouter)
-
-
+app.use("/comments", commentRouter)
 
 
 db.sequelize.sync().then(()=> {
-   
      app.listen(port, ()=> {
         console.log(`server runing on ${port}`)
     })
