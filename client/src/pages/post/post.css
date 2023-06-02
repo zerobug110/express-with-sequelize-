@@ -39,6 +39,19 @@
   }
   
   .comment {
-    background-color: red;
     width: 400px;
+  }
+
+  .comment-list {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .comment-message {
+    background-color: rgb(57, 173, 250);
+    padding: 20px;  
+    margin-top: 15px;
+    border-radius: 20px 5px;
+    
   }
